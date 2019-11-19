@@ -1,22 +1,116 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+.body-content {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.bg-image {
+  min-height: 100vh;
+  background-image: url('/images/collaborate.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.overlay {
+  width: 100vw;
+  min-height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(38, 65, 143, 0.8);
+  z-index: 2;
+}
+
+.main {
+  position: relative;
+  color: white;
+  z-index: 3;
+  overflow: hidden;
+}
+
+.landing-page-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.landing-page-form {
+  width: 30%;
+  padding: 1.5rem;
+}
+
+.form-text {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.landing-page-text {
+  width: 50%;
+  padding-right: 2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.landing-page-text {
+  line-height: 2rem;
 }
 
-.App-link {
-  color: #09d3ac;
+.landing-page-text h2 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  font-weight: bolder;
+  font-size: 3rem;
+}
+
+.landing-page-text p {
+  font-size: 1.5rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.landing-page-form {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  color: #767779;
+}
+
+.landing-page-form form {
+  margin: auto;
+  width: 100%;
+  padding: 2rem;
+}
+
+.landing-page-form form .btn {
+  width: 100%;
+}
+
+/* Small Screens */
+@media only screen and (max-width: 550px) {
+  .landing-page-content {
+    flex-direction: column;
+    min-height: 50%;
+  }
+  .landing-page-text {
+    padding-bottom: 1rem;
+  }
+  .landing-page-text,
+  .landing-page-form {
+    width: 100%;
+  }
 }
